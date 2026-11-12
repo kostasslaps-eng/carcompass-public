@@ -1,0 +1,52 @@
+{
+  "sections": [
+    {
+      "id": "before",
+      "items": [
+        { "id": "vin-check", "text": "Run a VIN history check (e.g. carVertical) for mileage and accident history." },
+        { "id": "ask-vin", "text": "Ask for the VIN and a photo of the registration certificate before travelling." },
+        { "id": "daylight-cold", "text": "Arrange to see the car in daylight, with the engine cold." }
+      ]
+    },
+    {
+      "id": "seller",
+      "items": [
+        { "id": "registration", "text": "Registration certificate in the seller’s name." },
+        { "id": "inspection", "text": "A valid technical inspection (TA)." },
+        { "id": "service-book", "text": "Service book or invoices showing regular oil changes." },
+        { "id": "owners", "text": "How many owners the car has had." },
+        { "id": "reason", "text": "Why they are selling." }
+      ]
+    },
+    {
+      "id": "car",
+      "items": [
+        { "id": "cold-start", "text": "Start the engine from cold: it should start easily, with no smoke or loud rattles." },
+        { "id": "warning-lights", "text": "After starting, all dashboard warning lights go out within a few seconds." },
+        { "id": "rust", "text": "Check for rust on the sills, wheel arches and under the doors." },
+        { "id": "panels", "text": "Look for uneven panel gaps or paint that doesn’t match (signs of accident repair)." },
+        { "id": "tyres", "text": "Tyres: same brand per axle, even wear, at least 3 mm of tread." }
+      ]
+    },
+    {
+      "id": "drive",
+      "items": [
+        { "id": "gearbox", "text": "Gears change smoothly, with no crunching, jerks or slipping." },
+        { "id": "brakes", "text": "Brakes stop straight, without vibration." },
+        { "id": "steering", "text": "Steering stays straight on a flat road; no knocks over bumps." },
+        { "id": "noises", "text": "No unusual knocks, whines or rattles at any speed." },
+        { "id": "ac", "text": "Air conditioning blows cold." }
+      ]
+    },
+    {
+      "id": "redflags",
+      "items": [
+        { "id": "deposit", "text": "The seller wants a deposit before you have seen the car." },
+        { "id": "no-vin", "text": "The seller won’t share the VIN." },
+        { "id": "wrong-address", "text": "The car isn’t at the seller’s address." },
+        { "id": "too-cheap", "text": "The price is far below every similar ad." },
+        { "id": "pressure", "text": "You’re pushed to decide today." }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+@import 'tailwindcss';
+@import './tokens.css';
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    font-weight: 400;
+    color: var(--color-ink);
+    /* Wider screens: the app column sits centred on a soft page background. */
+    background: var(--color-surface-soft);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* Range sliders (DESIGN §3): 2px track, 4px primary fill, square 16px thumbs. --fill is set inline (0–100%). */
+@layer components {
+  .cc-range {
+    appearance: none;
+    width: 100%;
+    height: 24px;
+    margin: 0;
+    background: transparent;
+    cursor: pointer;
+  }
+  .cc-range::-webkit-slider-runnable-track {
+    height: 4px;
+    background:
+      linear-gradient(var(--color-primary), var(--color-primary)) 0 50% / var(--fill, 0%) 4px no-repeat,
+      linear-gradient(var(--color-hairline-strong), var(--color-hairline-strong)) 0 50% / 100% 2px no-repeat;
+  }
+  .cc-range::-moz-range-track {
+    height: 4px;
+    background:
+      linear-gradient(var(--color-primary), var(--color-primary)) 0 50% / var(--fill, 0%) 4px no-repeat,
+      linear-gradient(var(--color-hairline-strong), var(--color-hairline-strong)) 0 50% / 100% 2px no-repeat;
+  }
+  .cc-range::-webkit-slider-thumb {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    margin-top: -6px;
+    background: var(--color-canvas);
+    border: 2px solid var(--color-primary);
+    border-radius: 0;
+  }
+  .cc-range::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    box-sizing: border-box;
+    background: var(--color-canvas);
+    border: 2px solid var(--color-primary);
+    border-radius: 0;
+  }
+
+  /* Dual slider: two inputs stacked; only the thumbs take pointer events, the track is drawn behind. */
+  .cc-range-dual {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+  .cc-range-dual::-webkit-slider-runnable-track {
+    background: none;
+  }
+  .cc-range-dual::-moz-range-track {
+    background: none;
+  }
+  .cc-range-dual::-webkit-slider-thumb {
+    pointer-events: auto;
+  }
+  .cc-range-dual::-moz-range-thumb {
+    pointer-events: auto;
+  }
+}
+
+@keyframes sheet-in {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: none;
+  }
+}
